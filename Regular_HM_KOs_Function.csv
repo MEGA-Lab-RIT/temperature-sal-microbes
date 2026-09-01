@@ -1,0 +1,66 @@
+KO Number,Main_Function,Function,Sub_Function,Name 
+K18954,Genetic information processing,Genetic information processing,Transcription factors,"pobR; AraC family transcriptional regulator, transcriptional activator of pobA"
+K17686,Environmental information Processing,Signal transduction,MAPK signaling pathway,"copA, ctpA, ATP7; P-type Cu+ transporter [EC:7.2.2.8]"
+K15125,Human disease,Infectious disease: bacterial ,Pertussis,fhaB; filamentous hemagglutinin
+K14441,Genetic information processing,Genetic information processing,Ribosome biogensis,rimO; ribosomal protein S12 methylthiotransferase [EC:2.8.4.4]
+K14260,Metabolism ,Amino acid metabolism,"Alanine, aspartate and glutamate metabolism",alaA; alanine-synthesizing transaminase [EC:2.6.1.66 2.6.1.2]
+K11904,Membrane transport,Membrane transport,secretion system,vgrG; type VI secretion system secreted protein VgrG
+K11381,Metabolism,Carbohydrate metabolism,Propanoate metabolism,bkdA; 2-oxoisovalerate dehydrogenase E1 component [EC:1.2.4.4]
+K09945,Unknown,Unknown,Unknown,K09945; uncharacterized protein
+K09710,Genetic information processing,Genetic information processing,Ribosome biogensis,ybeB; ribosome-associated protein
+K07516,Metabolism,Carbohydrate metabolism,Butanoate metabolism,fadN; 3-hydroxyacyl-CoA dehydrogenase [EC:1.1.1.35]
+K07052,Metabolism,Metabolism,Peptidases and inhibitors,K07052; CAAX protease family protein
+K06894,Metabolism,Metabolism,Peptidases and inhibitors,yfhM; alpha-2-macroglobulin
+K06881,Metabolism,Energy metabolism,Sulfur metabolism,nrnA; bifunctional oligoribonuclease and PAP phosphatase NrnA [EC:3.1.3.7 3.1.13.3]
+K05986,Genetic information processing,Genetic information processing,DNA repair and recombination proteins,NUCS; nuclease S1 [EC:3.1.30.1]
+K04487,Metabolism,Metabolism of cofactors and vitamins,Thiamine metabolism ,"iscS, NFS1; cysteine desulfurase [EC:2.8.1.7]"
+K04079,Genetic Information Processing,"Folding, sorting and degradation",Protein processing in endoplasmic reticulum,"HSP90A, htpG; molecular chaperone HtpG"
+K04078,Metabolism,Metabolism,Chaperones and folding catalysts,"groES, HSPE1; chaperonin GroES"
+K04043,Genetic Information Processing,"Folding, sorting and degradation",RNA degradation,"dnaK, HSPA9; molecular chaperone DnaK"
+K03918,Metabolism,Metabolism,Amino acid related enzymes,lat; L-lysine 6-transaminase [EC:2.6.1.36]
+K03832,Signaling and cellular processes,Signaling and cellular processes,Transporters,tonB; periplasmic protein TonB
+K03798,Metabolism,Metabolism,Peptidases and inhibitors,"ftsH, hflB; cell division protease FtsH [EC:3.4.24.-]"
+K03781,Metabolism,Carbohydrate metabolism,Glyoxylate and dicarboxylate metabolism,"katE, CAT, catB, srpA; catalase [EC:1.11.1.6]"
+K03704,Transcription,Unknown,Unknown,cspA; cold shock protein
+K03695,Genetic Information Processing,Genetic Information Processing,Chaperones and folding catalysts,clpB; ATP-dependent Clp protease ATP-binding subunit ClpB
+K03687,Genetic Information Processing,Genetic Information Processing,Chaperones and folding catalysts,GRPE; molecular chaperone GrpE
+K03686,Genetic Information Processing,Genetic Information Processing,Chaperones and folding catalysts,dnaJ; molecular chaperone DnaJ
+K03628,Genetic Information Processing,"Folding, sorting and degradation",RNA degradation,rho; transcription termination factor Rho
+K03543,Signaling and cellular processes,Signaling and cellular processes,Transporters,"emrA; membrane fusion protein, multidrug efflux system"
+K03496,Genetic Information Processing,Genetic Information Processing,Chromosome and associated proteins,"parA, soj; chromosome partitioning protein"
+K03415,Environmental Information Processing,Signal transduction,Two-component system,"cheV; two-component system, chemotaxis family, chemotaxis protein CheV"
+K03386,Cellular Processes,Cell growth and death,Apoptosis,"PRDX2_4, ahpC; peroxiredoxin 2/4 [EC:1.11.1.24]"
+K03089,Genetic information processing,Genetic information processing,Transcription machinery,rpoH; RNA polymerase sigma-32 factor
+K03088,Genetic information processing,Genetic information processing,Transcription machinery,"rpoE; RNA polymerase sigma-70 factor, ECF subfamily"
+K03070,Genetic Information Processing,"Folding, sorting and degradation",Protein export,secA; preprotein translocase subunit SecA [EC:7.4.2.8]
+K02407,Cellular Processes,Cell motility,Flagellar assembly,fliD; flagellar hook-associated protein 2
+K02406,Environmental Information Processing,Signal transduction,Two-component system,"fliC, hag; flagellin"
+K02398,Environmental Information Processing,Signal transduction,Two-component system,flgM; negative regulator of flagellin synthesis FlgM
+K02316,Genetic Information Processing,Replication and repair,DNA replication,dnaG; DNA primase [EC:2.7.7.101]
+K01953,Metabolism,Amino acid metabolism,"Alanine, aspartate and glutamate metabolism","asnB, ASNS; asparagine synthase (glutamine-hydrolysing) [EC:6.3.5.4]"
+K01715,Metabolism,Carbohydrate metabolism,Butanoate metabolism,crt; short-chain-enoyl-CoA hydratase
+K01712,Metabolism,Amino acid metabolism,Histidine metabolism,"hutU, UROC1; urocanate hydratase [EC:4.2.1.49]"
+K01682,Metabolism,Carbohydrate metabolism,Citrate cycle (TCA cycle),acnB; aconitate hydratase 2 / 2-methylisocitrate dehydratase [EC:4.2.1.3 4.2.1.99]
+K01647,Metabolism,Carbohydrate metabolism,Citrate cycle (TCA cycle),"CS, gltA, CIT; citrate synthase [EC:2.3.3.1]"
+K01638,Metabolism,Carbohydrate metabolism,Pyruvate metabolism,"aceB, glcB, MLS; malate synthase [EC:2.3.3.9]"
+K01637,Metabolism,Carbohydrate metabolism,Glyoxylate and dicarboxylate metabolism,"ICL, aceA; isocitrate/methylisocitrate lyase [EC:4.1.3.1 4.1.3.30]"
+K00812,Metabolism,Amino acid metabolism,"Alanine, aspartate and glutamate metabolism",aspB; aspartate aminotransferase [EC:2.6.1.1]
+K00764,Metabolism,Nucleotide metabolism,Purine metabolism,"purF, PPAT; amidophosphoribosyltransferase [EC:2.4.2.14]"
+K00705,Metabolism,Carbohydrate metabolism,Starch and sucrose metabolism,malQ; 4-alpha-glucanotransferase [EC:2.4.1.25]
+K00138,Metabolism,Carbohydrate metabolism,Glycolysis / Gluconeogenesis,aldB; aldehyde dehydrogenase [EC:1.2.1.-]
+K21573,Signaling and cellular processes,Signaling and cellular processes,Transporters,susC; TonB-dependent starch-binding outer membrane protein SusC
+K21572,Signaling and cellular processes,Signaling and cellular processes,Transporters,"susD; starch-binding outer membrane protein, SusD/RagB family"
+K21062,Metabolism,Metabolism of other amino acids,D-Amino acid metabolism,lhpC; 1-pyrroline-4-hydroxy-2-carboxylate deaminase [EC:3.5.4.22]
+K07113,Unknown,Unknown,Unknown,fxsA; UPF0716 protein FxsA
+K06891,Genetic information processing,Genetic information processing,Protein processing,clpS; ATP-dependent Clp protease adaptor protein ClpS
+K06142,Signaling and cellular processes,Signaling and cellular processes,Structural proteins,"hlpA, ompH; outer membrane protein"
+K03776,Environmental Information Processing,Signal transduction,Two-component system,aer; aerotaxis receptor
+K03758,Signaling and cellular processes,Signaling and cellular processes,Transporters,"arcD, lysl, lysP; arginine:ornithine antiporter / lysine permease"
+K03696,Genetic information processing,Genetic information processing,Chaperones and folding catalysts,clpC; ATP-dependent Clp protease ATP-binding subunit ClpC
+K03664,Signaling and cellular processes,Signaling and cellular processes,Protein processing,smpB; SsrA-binding protein
+K03544,Cellular Processes,Cell growth and death,Cell cycle - Caulobacter,"clpX, CLPX; ATP-dependent Clp protease ATP-binding subunit ClpX"
+K02935,Genetic Information Processing,Translation,Ribosome,"RP-L7, MRPL12, rplL; large subunit ribosomal protein L7/L12"
+K02899,Genetic Information Processing,Translation,Ribosome,"RP-L27, MRPL27, rpmA; large subunit ribosomal protein L27"
+K01999,Environmental Information Processing,Membrane transport,ABC transporters,livK; branched-chain amino acid transport system substrate-binding protein
+K01752,Metabolism,Amino acid metabolism,"Glycine, serine and threonine metabolism","E4.3.1.17, sdaA, sdaB, tdcG; L-serine dehydratase [EC:4.3.1.17]"
+K01640,Metabolism,Carbohydrate metabolism,Butanoate metabolism,"HMGCL, hmgL; hydroxymethylglutaryl-CoA lyase [EC:4.1.3.4]"
