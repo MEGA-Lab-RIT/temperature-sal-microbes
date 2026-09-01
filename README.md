@@ -10,4 +10,6 @@ Elle M. Barnes: embsbi@rit.edu
 More info when it gets published 
 # Authors 
 #### Emma G. Thompson 
+egt5318@rit.edu
 #### Elle M. Barnes 
+embsbi@rit.edu
