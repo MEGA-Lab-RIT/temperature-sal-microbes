@@ -291,4 +291,6 @@ ANCOMBC_Results<- HeatMap_Bd_Temp / HeatMap_Bsal_Temp + plot_layout(guides = "co
 ANCOMBC_w_Tags<-ANCOMBC_Results + plot_annotation(tag_levels = 'A') & 
   theme(plot.tag = element_text(face = 'bold'))
 
+ggsave("Supplimental_Figure_4.png", plot = ANCOMBC_w_Tags, width = 8, height = 10, units = "in", dpi = 600)
+
 

@@ -76,11 +76,12 @@ Bd_points$group <- model_betdisp_Bd$group
 Bd_centroids <- data.frame(model_betdisp_Bd$centroids[,1:2])
 Bd_centroids$group <- rownames(Bd_centroids)
 Bd_segments <- Bd_points %>%
-  rename(x = PCoA1, y = PCoA2) %>%
+  dplyr::rename(x = PCoA1, y = PCoA2) %>%  
   mutate(xend = Bd_centroids$PCoA1[match(group, Bd_centroids$group)],
          yend = Bd_centroids$PCoA2[match(group, Bd_centroids$group)])
 Bd_points$Temperature <- Sample_Names_Bd$Temperature
 Bd_centroids$Temperature <- c("15", "29")
+
 
 
 PCoA_Bd <- ggplot() +
@@ -143,6 +144,11 @@ Results_Bsal_df <- as.data.frame(Results_Bsal)
 
 Only_Sig_Results_Bsal <- Results_Bsal_df[which(Results_Bsal_df$padj < 0.05 & abs(Results_Bsal_df$log2FoldChange) > 1), ]
 
+normalized_counts_Bsal <- counts(DeSeqDataset_Bsal2, normalized = TRUE) 
+
+Sig_normalized_counts_Bsal <- normalized_counts_Bsal[rownames(Only_Sig_Results_Bsal), ] 
+
+Sig_normalized_counts_Bsal_df <- as.data.frame(Sig_normalized_counts_Bsal) 
 
 ####Data Visualization Bsal####
 
@@ -165,7 +171,7 @@ Bsal_points$group <- model_betdisp_Bsal$group
 Bsal_centroids <- data.frame(model_betdisp_Bsal$centroids[,1:2])
 Bsal_centroids$group <- rownames(Bsal_centroids)
 Bsal_segments <- Bsal_points %>%
-  rename(x = PCoA1, y = PCoA2) %>%
+  dplyr::rename(x = PCoA1, y = PCoA2) %>%  
   mutate(xend = Bsal_centroids$PCoA1[match(group, Bsal_centroids$group)],
          yend = Bsal_centroids$PCoA2[match(group, Bsal_centroids$group)])
 Bsal_points$Temperature <- Sample_Names_Bsal$Temperature
@@ -199,6 +205,12 @@ genes_15C <- rownames(Sig_normalized_counts_Bsal_df)[
 genes_29C_Bsal <- rownames(Sig_normalized_counts_Bsal_df)[
   rowSums(Sig_normalized_counts_Bsal_df[, c("Bsal_1_29", "Bsal_2_29", "Bsal_4_29")]) > 0]
 
+genes_20C_Bd <- rownames(Sig_normalized_counts_Bd_df)[
+  rowSums(Sig_normalized_counts_Bd_df[, c("Bd_1_20", "Bd_2_20", "Bd_4_20", "Bd_5_20")]) > 0]
+
+genes_29C_Bd <- rownames(Sig_normalized_counts_Bd_df)[
+  rowSums(Sig_normalized_counts_Bd_df[, c("Bd_1_29", "Bd_2_29", "Bd_4_29", "Bd_5_29")]) > 0]
+
 four_way_gene_list <- list(
   "Bd 20°C"   = genes_20C_Bd,
   "Bd 29°C"   = genes_29C_Bd,
@@ -216,6 +228,8 @@ Four_Way_Venn <- ggvenn(
 
 Figure_4<- Four_Way_Venn / (PCoA_Bd + PCoA_Bsal) + plot_annotation(tag_levels = 'A') & 
   theme(plot.tag = element_text(face = "bold"))
+
+ggsave("Figure_4.png", plot=Figure_4, height = 10, width =10, units= "in", dpi = 600)
 
 ####Supplemental Table 10: Statistical results for PERMANOVA on Gene Expression ####
 

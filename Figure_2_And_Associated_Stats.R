@@ -34,21 +34,16 @@ Bd_data$Temperature <- factor(Bd_data$Temperature)
 PalleteAdivGTDB <- c("#f2aa84","#83e291", "#96dcf8", "#d86ecc", "#ffa1e7")
 
 Bd_Inhibition <-
-  ggplot( data = Bd_data, aes(
-    x = Temperature,
-    y = Mean,
-    fill = Temperature
-  )) +
+  ggplot( data = Bd_data, aes(x = Temperature, y = Mean, fill = Temperature)) +
   geom_boxplot() +
   geom_jitter(color = "black", size = 1.5, alpha = 0.5, position = position_jitter(0.2)) +
-  labs(title= "A", x = "", y = "Pathogen Inhibition (%)") +
+  labs( x = "", y = "Pathogen Inhibition (%)") +
   theme_bw() +
-  coord_cartesian(ylim = c(0, 105)) +
-  theme(
-    legend.position = "right",
-    legend.key.size = unit(1, 'cm'),
-    axis.text.x = element_text()  # or element_blank() if you prefer hidden labels
-  ) +
+  coord_cartesian(ylim = c(0, 130)) +
+  theme(legend.key.size = unit(1, 'cm'),
+    axis.text.x = element_text(),
+    plot.title = element_text(face = "bold"),
+    panel.grid = element_blank()) +
   scale_fill_manual(values = PalleteAdivGTDB, name = "Temperature") 
 
 Bsal_data <- read.csv("Thesis_Bsal_Metabolites_R.csv")
@@ -58,24 +53,18 @@ Bsal_data1 <- Bsal_data %>%
 
 Bsal_data$Temperature <- factor(Bsal_data$Temperature)
 
-Bsal_Inhibition <-
-  ggplot( data = Bsal_data, aes(
-    x = Temperature,
-    y = Mean,
-    fill = Temperature
-  )) +
+Bsal_Inhibition <-ggplot( data = Bsal_data, aes( x = Temperature, y = Mean, fill = Temperature)) +
   geom_boxplot() +
   geom_jitter(color = "black", size = 1.5, alpha = 0.5, position = position_jitter(0.2)) +
-  labs(title= "", x = "", y = "Pathogen Inhibition (%)") +
+  labs(title= "B", x = "", y = "Pathogen Inhibition (%)") +
   theme_bw() +
-  coord_cartesian(ylim = c(0, 105)) +
-  theme(
-    legend.position = "right",
-    legend.key.size = unit(1, 'cm'),
-    axis.text.x = element_text()  # or element_blank() if you prefer hidden labels
-  ) +
-  scale_fill_manual(values = PalleteAdivGTDB, name = "Temperature") +
-  scale_y_continuous(limits = c(0, 100))
+  coord_cartesian(ylim = c(0, 130)) +
+  theme(legend.key.size = unit(1, 'cm'),
+        axis.text.x = element_text(),
+        plot.title = element_text(face = "bold"),
+        panel.grid = element_blank()) +
+  scale_fill_manual(values = PalleteAdivGTDB, name = "Temperature") 
+scale_y_continuous(limits = c(0, 100)) 
 
 #### D & C: Comunity Composition ####
 
@@ -181,23 +170,28 @@ sample_data(ps_sorted_Bsal_rare)
 ## Bd plot ##
 Day_Temp_Bd_Only <- plot_ordination(physeq16s.log.Bd, physeq16s.ord.Bd, shape = "Day", color = "Temperature") +
   geom_point(size = 2) +
-  scale_color_manual(values = c("15" = "#f2aa84", "18" = "#83e291", "20" = "#96dcf8", "25" = "#d86ecc", "29" = "#ffa1e7"))+
-  theme_bw() 
+  theme_bw()+
+  theme(plot.title = element_text(face = "bold"), panel.grid = element_blank())+
+  scale_color_manual(values = c("15" = "#f2aa84", "18" = "#83e291", "20" = "#96dcf8", "25" = "#d86ecc", "29" = "#ffa1e7"))
 print(Day_Temp_Bd_Only)
 
 ##Bsal Plot ##
+
 Day_Temp_Bsal_Only <- plot_ordination(physeq16s.log.Bsal, physeq16s.ord.Bsal, shape = "Day", color = "Temperature") +
   geom_point(size = 2) +
-  scale_color_manual(values = c("15" = "#f2aa84", "18" = "#83e291", "20" = "#96dcf8", "25" = "#d86ecc", "29" = "#ffa1e7"))+
-  theme_bw() 
-print(Day_Temp_Bsal_Only)
+  theme_bw()+
+  theme(plot.title = element_text(face = "bold"), panel.grid = element_blank())+
+  scale_color_manual(values = c("15" = "#f2aa84", "18" = "#83e291", "20" = "#96dcf8", "25" = "#d86ecc", "29" = "#ffa1e7"))
 
 #### Combining A,B,C, & D ####
 
-Figure_2 <- (Bd_Inhibition + Bsal_Inhibition) / (Day_Temp_Bd_Only + Day_Temp_Bsal_Only + plot_layout(guides = "collect") &
-                                                       theme(legend.position = "right"))
+Figure_2.1 <- (Bd_Inhibition + Bsal_Inhibition + plot_layout(guides = "collect") & theme(legend.position = "right")) / (Day_Temp_Bd_Only + Day_Temp_Bsal_Only + plot_layout(guides = "collect") & theme(legend.position = "right"))
 
-ggsave("Figure_2.png", plot= Figure_2, height = 10, width = 10, units = "in")
+Figure_2<- Figure_2.1 + plot_annotation(tag_levels = 'A') & 
+  theme(plot.tag = element_text(face = "bold"))
+
+
+ggsave("Figure_2.png", plot= Figure_2, height = 10, width = 10, units = "in", dpi = 600)
 
 
 #### Supplemental Table 4: PERMANOVA of Day and Temperature's Effect on Community Comp####

@@ -281,6 +281,8 @@ Adiv_with_Letters<- Bd_Only_Adiv_plot + Bsal_Only_Adiv_plot + plot_layout(guides
 
 Adiv_with_Letters<- Adiv_with_Letters & theme(text = element_text(size = 10))
 
+ggsave("Supplimental_Figure_1.png", plot = Adiv_with_Letters, height= 20, width = 15, units = "in")
+
 #### Supplemental Table 2: Statistical results for two-way ANOVA on alpha diversity ####
 
 ##Bd 

@@ -18,6 +18,7 @@ library(patchwork)
 library(cowplot)
 library(microViz)
 library(ggpubr)
+library(tibble)
 
 #### Reading in Data ####
 sv<- read.csv("featuretable16S 2.csv")

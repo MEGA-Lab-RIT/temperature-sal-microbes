@@ -194,7 +194,7 @@ normalized_counts_Bd_df2 <- Sig_normalized_counts_Bd_df %>%
 top_50_genes_bd <- normalized_counts_Bd_df2 %>%
   mutate(total_count = rowSums(across(-gene), na.rm = TRUE)) %>%
   arrange(desc(total_count)) %>%
-  slice(1:50) %>%
+  dplyr::slice(1:50) %>%
   select(-total_count)
 
 normalized_counts_Bd_df3 <- top_50_genes_bd %>%
@@ -246,7 +246,7 @@ Heatmap_Bd_Plain<- ggplot(normalized_counts_Bd_df3, aes(x = sample, y = gene, fi
 All_KOs_Function <- read.csv("Regular_HM_KOs_Function.csv")
 
 All_KOs_Function <- All_KOs_Function %>% 
-  rename(gene = KO.Number,)
+  dplyr::rename(gene = KO.Number)
 
 KO_anot_Bd <- left_join(normalized_counts_Bd_df3, All_KOs_Function, by = "gene", relationship = "many-to-many")%>% 
   arrange(Function, gene)
@@ -277,7 +277,7 @@ normalized_counts_Bsal_df2 <- Sig_normalized_counts_Bsal_df %>%
 top_50_genes <- normalized_counts_Bsal_df2 %>%
   mutate(total_count = rowSums(across(-gene), na.rm = TRUE)) %>%
   arrange(desc(total_count)) %>%
-  slice(1:50) %>%
+  dplyr::slice(1:50) %>%
   select(-total_count)
 
 normalized_counts_Bsal_df3 <- top_50_genes %>%
